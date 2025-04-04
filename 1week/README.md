@@ -47,6 +47,8 @@
 </html>
 ```
 실행 결과
+
+
 <img width="434" alt="게임, 그림그리기" src="https://github.com/user-attachments/assets/156e513c-dcdc-48a0-9213-dcd1472d12c5" />
 
 ---
