@@ -32,6 +32,8 @@
 ```
 실행 결과
 
+<img width="443" alt="스크린샷 2025-04-05 오후 12 49 26" src="https://github.com/user-attachments/assets/4694ac2c-cf47-42f7-8baf-e11c255b959d" />
+
 
 ---
 
