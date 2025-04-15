@@ -6,7 +6,7 @@
 ---
 
 ## 📁 프로젝트 시작
-1. 폴더 생성 후 같은 폴더에 `main.html`, ‘color.html’ 파일 생성
+1. 폴더 생성 후 같은 폴더에 `main.html`, `color.html` 파일 생성
 2. 왼쪽 파일 목록에서 `main.html` 파일 **우클릭 → Open with Live Server**
 3. 코드 수정 후 **실시간 반영이 안 될 경우:** `Ctrl + S`로 저장
 
@@ -62,9 +62,11 @@
 
 ```
 main.html 실행 결과
+
 <img width="360" alt="스크린샷 2025-04-15 오후 1 22 44" src="https://github.com/user-attachments/assets/d039acd3-c863-4da9-b772-a4900e4b4103" />
 
-color.htm
+color.html 실행 결과
+
 <img width="357" alt="스크린샷 2025-04-15 오후 1 22 55" src="https://github.com/user-attachments/assets/93495555-9389-4e78-8285-6e3d29606d31" />
 
 ---
