@@ -1,4 +1,4 @@
-# 멘토링 4주차
+# 멘토링 5주차
 
 ## ✍️ 영타 연습  
 [한컴 타자 연습](https://www.hancomtaja.com/ko)
