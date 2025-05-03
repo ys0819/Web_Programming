@@ -12,7 +12,7 @@
 
 ---
 
-## 🧾 main.html 코드 예시
+## 🧾 box_model.html 코드 예시
 
 ```html
 <!DOCTYPE html>
@@ -39,9 +39,15 @@
 
 ```
 실행 결과
+
+
 <img width="440" alt="스크린샷 2025-05-03 오전 11 40 52" src="https://github.com/user-attachments/assets/7770fbe7-78b5-4c90-bd58-467e34f25917" />
 
 ---
+
+
+![image](https://github.com/user-attachments/assets/bad3896a-b76d-4797-9a63-148989963ba3)
+
 
 ## 📚 오늘 배운 CSS 속성 
 | 속성 | 설명 |
