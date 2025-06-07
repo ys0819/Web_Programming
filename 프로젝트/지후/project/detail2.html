@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>지후의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(45deg, #ff0000, #000000);
+        background-size: 400% 400%;
+        animation: pulseBackground 1s infinite alternate;
+        overflow: hidden;
+      }
+
+      @keyframes pulseBackground {
+        0% {
+          background-position: 0% 50%;
+          filter: brightness(0.9);
+        }
+        100% {
+          background-position: 100% 50%;
+          filter: brightness(1.4);
+        }
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+        animation: shake 0.3s infinite;
+      }
+
+      @keyframes shake {
+        0% { transform: translate(1px, 0px) rotate(0deg); }
+        25% { transform: translate(-1px, 1px) rotate(-1deg); }
+        50% { transform: translate(1px, -1px) rotate(1deg); }
+        75% { transform: translate(-1px, 1px) rotate(0deg); }
+        100% { transform: translate(0px, 0px) rotate(-1deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">파피플레이타임</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+    <div>
+      <img src="https://i.namu.wiki/i/vXztAXJttyr9G9gAQvQF0Q0oR3vs5yEU--MncPmmw8Mcg4zcI3adyh5p3K61x1K_Bb793w8AJ3Le9Wv16O4mNjDPhiiaa7EDdYNjUEhFxzrlfdmULT4-o10O8Qdmo786KqaO7-nFeFx1txCFjHzWeg.webp">
+      파피플레이타임은 Mob Entertainment에서 개발한 1인칭 공포 퍼즐 어드벤처 게임으로,2021년 10월 12일에 첫 챕터가 출시되었다. 이 게임은 폐쇄된 장난감 공장을 배경으로 하며, 플레이어는 실종된 직원들의 행방을 추적하며 공장의 비밀을 파헤쳐야 한다.
+      챕터는 4까지 나왔으며 5는 미정이다.
+    </div>
+  </body>
+</html>

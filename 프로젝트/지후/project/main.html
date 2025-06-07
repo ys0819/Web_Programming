@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>지후의 웹페이지</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* h1은 그대로 상단에 유지 */
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        width: 100%; /* h1이 화면 전체 너비를 차지하도록 */
+        border-bottom: 2px solid black;
+        padding-bottom: 5px;
+        box-sizing: border-box; /* padding 포함한 크기 조정 */
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      p {
+        font-size: 40px;
+        border: 2px solid red;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        margin: 10px 0;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      p:hover {
+        background-color: yellow;
+        transform: scale(1.05);
+      }
+
+      /* 각각의 p 크기 설정 */
+      .p1 { width: 200px; }
+      .p2 { width: 320px; }
+      .p3 { width: 440px; }
+    </style>
+  </head>
+  <body>
+    <h1>내가 좋아하는 게임</h1>
+    <a href="./detail1.html">
+      <p class="p1">1. 로블록스</p>
+    </a>
+    <a href="./detail2.html">
+      <p class="p2">2. 파피플레이타임</p>
+    </a>
+    <a href="./detail3.html">
+      <p class="p3">3. 프라이데이 나이트 펑킨</p>
+    </a>
+  </body>
+</html>

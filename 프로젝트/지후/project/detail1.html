@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>지후의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #345fff;
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background-color: white;
+      }
+
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 2s infinite ease-in-out;
+      }
+
+      @keyframes twinkle {
+        0%, 100% {
+          opacity: 0.2;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">로블록스</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnsicfndSNsx7azgwBQ1VR_y4EoNfk-a_MQ&s">
+      로블록스는 사용자가 직접 게임을 만들고 다른 사용자가 만든 게임을 플레이 할 수 있는 온라인 게임 플랫폼이자 게임 제작 시스템이다. 미국의 Roblox corporation에서 개발했으며,2006년에 정식 출시 되었다.
+    </div>
+
+
+    <!-- 별 효과 50개 생성 -->
+    <script>
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.top = Math.random() * window.innerHeight + "px";
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.animationDelay = Math.random() * 2 + "s";
+        document.body.appendChild(star);
+      }
+    </script>
+  </body>
+</html>
