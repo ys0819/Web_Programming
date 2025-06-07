@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>태경의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(to top, #deb887 60%, #f7e1b5 40%);
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* 삼각형 모래 더미 */
+      .sand-pyramid {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid #d2b48c;
+        filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.1));
+      }
+      .sand-pyramid::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-bottom: 60px solid #f0d9a8;
+        border-right: 40px solid transparent;
+        transform: translateX(10px);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      /* 위치 조정 */
+      .pyramid1 {
+        left: 10%;
+      }
+      .pyramid2 {
+        left: 25%;
+        border-bottom-color: #c19a6b;
+      }
+      .pyramid3 {
+        left: 40%;
+      }
+      .pyramid4 {
+        left: 55%;
+        border-bottom-color: #c19a6b;
+      }
+      .pyramid5 {
+        left: 70%;
+      }
+
+      /* 이모티콘 스타일 및 애니메이션 */
+  
+
+
+      @keyframes move1 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(50px, -30px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move2 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(-40px, 20px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move3 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(60px, 40px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move4 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(-50px, -20px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move5 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(30px, 50px); }
+        100% { transform: translate(0, 0); }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+      "
+    >
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">배드워즈</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+    <div>
+      <img src="https://i.namu.wiki/i/2tAJEbFbUG4rUmadvLkb56Xfiu77v7Xx2sV_ie7WDz0MUr46NmkGQwOsNks2cxQxqVywJbHjTZ0MMpU-rsNk7Khfu5kvRIXamt-9KpE2mcHKf5sEX0r7fyz44rafFrzzGNBcktYl_EltrrG5OO3ogA.webp">
+제작 날짜
+2021년 5월 28일
+최근 업데이트 날짜
+2025년 4월 5일
+최대 플레이어 수
+40명
+플랫폼
+PC / 모바일 / 콘솔
+PC 버전[8]
+숫자
+슬롯 칸 변경
+F1
+스냅숍 모드
+H[9], Backspace
+아이템 던지기
+↑, ↓, ←, →, W, S, A, D
+이동
+Shift
+달리기
+F
+상호작용
+E
+인벤토리
+Ctrl
+시프트 락
+T
+이모트
+G
+핀 찍기[핀] [11]
+Shift + P
+관전 모드[12]
+C
+집으로 귀환[귀환참고]
+모바일 버전[14] ||
+로블록스 베드워즈 달리기(활성...
+[15]
+달리기 버튼
+달리기[16]
+돌진방패를 장착했을 때 뜨는 초록 방패버튼
+돌진방패를 사용
+회색 위 쪽 화살표 버튼
+아이템 던지기[17]
+회색 음식 모양 버튼
+음식 먹기/상자 소환[18]
+로블록스 베드워즈 공격 버튼
+공격 버튼
+검으로 공격하기[19]
+파란 방패 모양 버튼
+인페르노 쉴더 방패 들기
+풍선을 장착했을 때 뜨는 위 쪽 화살표 버튼
+풍선 달기[20]
+풍선을 장착했을 때 뜨는 아래쪽 버튼
+풍선 터뜨리기
+풍선을 장착했을 때 뜨는 폭탄 버튼
+TNT 떨어뜨리기
+로블록스 베드워즈 블럭설치 버...
+블록설치 버튼
+블록을 보는 시점으로 설치[중요][22]
+로블록스 베드워즈 능력사용 버...
+능력사용 버튼
+키트의 스킬을 쓰기[23]
+빈 가로 이미지
+노란색 집모양 버튼
+귀환[귀환참고]
+빈 가로 이미지
+공기 케논을 들 때 뜨는 노란색 공기 케논 버튼
+공기 케논 쓰기
+빈 가로 이미지
+핀 버튼
+한 번 누르고 버튼 제외하고 아무데나 눌려서 핀 찍기[핀]
+소스 총을 들고 있을 때 소스 총 모양
+    </div>
+
+    <!-- 삼각형 모래 더미들 -->
+    <div class="sand-pyramid pyramid1"></div>
+    <div class="sand-pyramid pyramid2"></div>
+    <div class="sand-pyramid pyramid3"></div>
+    <div class="sand-pyramid pyramid4"></div>
+    <div class="sand-pyramid pyramid5"></div>
+
+    <!-- 움직이는 이모티콘들 -->
+    
+  </body>
+</html>
