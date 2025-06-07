@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>태경의 웹페이지</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(90deg, #3b3b3b 60%, #8b0000 40%);
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.6);
+        position: relative;
+        z-index: 10;
+      }
+      button {
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(2px, -2px);
+        }
+        50% {
+          transform: translate(-2px, 2px);
+        }
+        75% {
+          transform: translate(2px, 2px);
+        }
+      }
+
+      .person {
+        position: fixed;
+        bottom: 100px;
+        width: 150px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: shake 3s ease-in-out infinite;
+        z-index: 5;
+      }
+      .person .head {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background: #f5d6b4;
+        border-radius: 50%;
+        box-shadow: inset 0 0 10px #c48f68;
+      }
+
+      /* 검정색 눈동자만 */
+      .person .eye {
+        position: absolute;
+        top: 25px; /* 눈 위치를 좀 더 위로 */
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+      }
+      .person .eye.left {
+        left: 18px;
+      }
+      .person .eye.right {
+        right: 18px;
+      }
+
+      /* 입 제거됨 */
+
+      /* 총 이미지 */
+      .person .gun {
+        margin-top: 30px;
+        width: 80px; /* 이미지 너비 */
+        height: 80px; /* 이미지 높이 */
+      }
+      .person .gun img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .person.left {
+        left: 50px;
+      }
+      .person.right {
+        right: 50px;
+        transform: scaleX(-1);
+      }
+      .person.right .gun img {
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">라이벌</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+
+    <div class="person left">
+      <div class="head">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <!-- 입 없음 -->
+      </div>
+      <div class="gun">
+        <img src="https://i.ibb.co/r2cxtNch/target-13158364.png" alt="target" />
+      </div>
+    </div>
+
+    <div class="person right">
+      <div class="head">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <!-- 입 없음 -->
+      </div>
+      <div class="gun">
+        <img src="https://i.ibb.co/r2cxtNch/target-13158364.png" alt="target" />
+      </div>
+    </div>
+  </body>
+</html>

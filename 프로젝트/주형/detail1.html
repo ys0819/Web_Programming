@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>주형의 웹페이지</title>
+    <style>
+      /* 전체 배경 블랙으로 설정 */
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: radial-gradient(circle at center, #000000 0%, #0a0a0a 80%);
+        position: relative;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 블랙홀 나선 모양 */
+      .blackhole {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        border-radius: 50%;
+        background:
+          repeating-conic-gradient(
+            from 0deg,
+            #111 0deg 5deg,
+            #222 5deg 10deg
+          );
+        animation: spin 10s linear infinite;
+        box-shadow:
+          inset 0 0 60px 30px rgba(255, 255, 255, 0.1),
+          0 0 40px 10px #222;
+        z-index: 0;
+      }
+
+      /* 회전 애니메이션 */
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* 별 효과 */
+      .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        pointer-events: none;
+        z-index: 0;
+      }
+      /* 작은 별들 */
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: twinkle 3s ease-in-out infinite;
+      }
+      /* 반짝임 */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 0.2; }
+      }
+
+      /* 콘텐츠는 위에 표시되도록 z-index */
+      header {
+        position: relative;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blackhole"></div>
+
+    <div class="stars">
+      <!-- 여러 개 별 생성 -->
+      <div class="star" style="width:2px; height:2px; top:10%; left:15%; animation-delay: 0s;"></div>
+      <div class="star" style="width:3px; height:3px; top:25%; left:80%; animation-delay: 1s;"></div>
+      <div class="star" style="width:1.5px; height:1.5px; top:70%; left:40%; animation-delay: 2s;"></div>
+      <div class="star" style="width:2.5px; height:2.5px; top:60%; left:65%; animation-delay: 1.5s;"></div>
+      <div class="star" style="width:2px; height:2px; top:35%; left:50%; animation-delay: 0.5s;"></div>
+      <div class="star" style="width:1.7px; height:1.7px; top:80%; left:25%; animation-delay: 2.3s;"></div>
+    </div>
+
+    <header
+      style="
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        color: white;
+      "
+    >
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">과학</h1>
+      <div style="margin-left: auto"></div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>주형의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f3f1e7; /* 약간 따뜻한 베이지 배경 */
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 상단 헤더 스타일 그대로 유지 */
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px 10px;
+        background-color: #fffdfa;
+        position: relative;
+        z-index: 10; /* 배경 위 */
+      }
+      .header a {
+        text-decoration: none;
+        margin-right: auto;
+      }
+
+      /* 배경에 책상 */
+      .desk {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 180px;
+        background: linear-gradient(145deg, #a9744f, #805c3b);
+        border-radius: 20px 20px 0 0;
+        box-shadow: inset 0 5px 10px rgba(255, 255, 255, 0.2);
+        z-index: 1;
+      }
+
+      /* 판사 몸체 */
+      .judge {
+        position: absolute;
+        bottom: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 160px;
+        height: 240px;
+        z-index: 5;
+      }
+
+      /* 판사 머리 */
+      .judge-head {
+        width: 80px;
+        height: 80px;
+        background: #f1c27d;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: inset 0 3px 0 #c28e4f;
+      }
+
+      /* 판사 몸통 */
+      .judge-body {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 170px;
+        background: linear-gradient(135deg, #2f2f2f 0%, #1a1a1a 100%);
+        border-radius: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+      }
+
+      /* 판사 봉 */
+      .judge-gavel {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(80px) rotate(-15deg);
+        width: 100px;
+        height: 20px;
+        background: #6d4c41;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      }
+      .judge-gavel::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 10px;
+        width: 20px;
+        height: 50px;
+        background: #5d4037;
+        border-radius: 8px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+      }
+
+      /* 책 더미 - 왼쪽 */
+      .books-left {
+        position: absolute;
+        bottom: 180px;
+        left: 10%;
+        width: 100px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 3;
+      }
+      .book {
+        width: 100px;
+        height: 20px;
+        background: linear-gradient(90deg, #8b4513, #a0522d);
+        border-radius: 3px;
+        box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+      }
+      .book:nth-child(2) {
+        width: 90px;
+        background: linear-gradient(90deg, #a0522d, #b5651d);
+      }
+      .book:nth-child(3) {
+        width: 80px;
+        background: linear-gradient(90deg, #6b4226, #8b5a2b);
+      }
+
+      /* 책 더미 - 오른쪽 */
+      .books-right {
+        position: absolute;
+        bottom: 180px;
+        right: 10%;
+        width: 100px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 3;
+      }
+      .books-right .book {
+        width: 100px;
+        height: 20px;
+        background: linear-gradient(90deg, #8b4513, #a0522d);
+        border-radius: 3px;
+        box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+      }
+      .books-right .book:nth-child(2) {
+        width: 85px;
+        background: linear-gradient(90deg, #a0522d, #b5651d);
+      }
+      .books-right .book:nth-child(3) {
+        width: 75px;
+        background: linear-gradient(90deg, #6b4226, #8b5a2b);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">사회</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+
+    <!-- 배경 책상 -->
+    <div class="desk"></div>
+
+    <!-- 판사 -->
+    <div class="judge">
+      <div class="judge-head"></div>
+      <div class="judge-body"></div>
+      <div class="judge-gavel"></div>
+    </div>
+
+    <!-- 왼쪽 책 더미 -->
+    <div class="books-left">
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+    </div>
+
+    <!-- 오른쪽 책 더미 -->
+    <div class="books-right">
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+    </div>
+  </body>
+</html>

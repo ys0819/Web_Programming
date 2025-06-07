@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>주형의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to top, #5c3b1e 60%, #9b7653 40%);
+        height: 100vh;
+        font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        position: relative;
+        z-index: 2;
+      }
+
+      .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .cave {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle at center, #3e2a1a 0%, #1e120a 80%);
+        border-radius: 50% 50% 0 0;
+        box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      /* 원시인 크기 ↑ */
+      .caveman {
+  position: absolute;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+}
+
+.caveman .person {
+  font-size: 120px; /* 💁 크게 */
+  margin-right: -30px; /* 돌이 손 위에 오게 왼쪽으로 당김 */
+  z-index: 2;
+}
+
+.caveman .stone {
+  font-size: 40px; /* 🪨 작게 */
+  position: relative;
+  top: -60px; /* 손 위로 올라오게 */
+  z-index: 1;
+}
+
+
+      .caveman span {
+        margin: 0 5px;
+        user-select: none;
+      }
+
+      /* 돌 크기 ↓ */
+      .rock {
+        position: absolute;
+        bottom: 100px;
+        font-size: 150px;
+        user-select: none;
+        z-index: 1;
+      }
+
+      .rock1 {
+        left: 5%;
+      }
+
+      .rock2 {
+        left: 75%;
+      }
+
+      .sunset {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 40px;
+        z-index: 0;
+      }
+
+      /* 불 크기 ↑ */
+      .fire {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 100px;
+        animation: flicker 0.8s infinite alternate;
+        z-index: 2;
+      }
+
+      @keyframes flicker {
+        0% {
+          transform: translateX(-50%) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(-50%) scale(1.1);
+          opacity: 0.8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">역사</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+
+    <div class="background">
+      <div class="sunset">🌅</div>
+      <div class="rock rock1">⛰️</div>
+      <div class="rock rock2">⛰️</div>
+      <div class="cave"></div>
+      <div class="fire">🔥</div>
+      <div class="caveman">
+        <span class="person">💁</span>
+        <span class="stone">🪨</span>
+      </div>
+    </div>
+  </body>
+</html>

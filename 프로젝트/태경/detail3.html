@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>태경의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(to top, #deb887 60%, #f7e1b5 40%);
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* 삼각형 모래 더미 */
+      .sand-pyramid {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid #d2b48c;
+        filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.1));
+      }
+      .sand-pyramid::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-bottom: 60px solid #f0d9a8;
+        border-right: 40px solid transparent;
+        transform: translateX(10px);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      /* 위치 조정 */
+      .pyramid1 {
+        left: 10%;
+      }
+      .pyramid2 {
+        left: 25%;
+        border-bottom-color: #c19a6b;
+      }
+      .pyramid3 {
+        left: 40%;
+      }
+      .pyramid4 {
+        left: 55%;
+        border-bottom-color: #c19a6b;
+      }
+      .pyramid5 {
+        left: 70%;
+      }
+
+      /* 이모티콘 스타일 및 애니메이션 */
+      .emoji {
+  position: absolute;
+  font-size: 40px;
+  user-select: none;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* 왔다갔다 */
+  animation-duration: 3s;  /* 이 부분 추가 */
+}
+
+
+      @keyframes move1 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(50px, -30px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move2 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(-40px, 20px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move3 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(60px, 40px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move4 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(-50px, -20px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes move5 {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(30px, 50px); }
+        100% { transform: translate(0, 0); }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+      "
+    >
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">배드워즈</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+
+    <!-- 삼각형 모래 더미들 -->
+    <div class="sand-pyramid pyramid1"></div>
+    <div class="sand-pyramid pyramid2"></div>
+    <div class="sand-pyramid pyramid3"></div>
+    <div class="sand-pyramid pyramid4"></div>
+    <div class="sand-pyramid pyramid5"></div>
+
+    <!-- 움직이는 이모티콘들 -->
+    <div class="emoji" style="top: 20%; left: 15%; animation-name: move1;">🗡️</div>
+    <div class="emoji" style="top: 30%; left: 30%; animation-name: move2;">🏹</div>
+    <div class="emoji" style="top: 50%; left: 45%; animation-name: move3;">🗡️</div>
+    <div class="emoji" style="top: 40%; left: 60%; animation-name: move4;">🏹</div>
+    <div class="emoji" style="top: 25%; left: 75%; animation-name: move5;">🗡️</div>
+  </body>
+</html>
