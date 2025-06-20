@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>주형의 웹페이지</title>
+    <style>
+      /* 전체 배경 블랙으로 설정 */
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: radial-gradient(circle at center, #000000 0%, #0a0a0a 80%);
+        position: relative;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+
+     
+
+
+
+
+      /* 별 효과 */
+      .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        pointer-events: none;
+        z-index: 0;
+      }
+      /* 작은 별들 */
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: twinkle 3s ease-in-out infinite;
+      }
+      /* 반짝임 */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 0.2; }
+      }
+
+
+      /* 콘텐츠는 위에 표시되도록 z-index */
+      header {
+        position: relative;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blackhole"></div>
+
+
+    <div class="stars">
+      <!-- 여러 개 별 생성 -->
+      <div class="star" style="width:2px; height:2px; top:10%; left:15%; animation-delay: 0s;"></div>
+      <div class="star" style="width:3px; height:3px; top:25%; left:80%; animation-delay: 1s;"></div>
+      <div class="star" style="width:1.5px; height:1.5px; top:70%; left:40%; animation-delay: 2s;"></div>
+      <div class="star" style="width:2.5px; height:2.5px; top:60%; left:65%; animation-delay: 1.5s;"></div>
+      <div class="star" style="width:2px; height:2px; top:35%; left:50%; animation-delay: 0.5s;"></div>
+      <div class="star" style="width:1.7px; height:1.7px; top:80%; left:25%; animation-delay: 2.3s;"></div>
+    </div>
+
+
+    <header
+      style="
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        color: white;
+      "
+    >
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">과학</h1>
+      <div style="margin-left: auto"></div>
+    </header>
+    <div>
+      <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fscs-phinf.pstatic.net%2FMjAyMjAxMDNfOTQg%2FMDAxNjQxMTg2MDcxODg0.anLMxBDwWRMVGJTAHTE-aaGoG5wEH-7C07HFgC-SABsg.vBdBfoQc1ykq3iD6A4-VApW6UN9p4Xqpwj-dpNaGDhwg.JPEG%2FGettyImages_1093711310.jpg%3Ftype%3Dw800&type=sc960_832">
+    <br>
+      과학은, 무언가에 궁금증이 생겨 그걸 탐구하는 학문이다.과학은 초3에 등장한다.과학은 4가지로 나뉘는데, 변하는 걸 관찰하는 화학, 원자 속 세계를 밝히는 물리학, 생명을 관찰하는 생물학, 지구의 역사를 파헤치는 지구과학이 있다.
+    </div>
+  </body>
+</html>

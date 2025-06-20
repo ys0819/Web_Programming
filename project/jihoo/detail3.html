@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>지후의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #ff40a9;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 10;
+        position: relative;
+      }
+
+      .mic {
+        position: absolute;
+        font-size: 24px;
+        animation: float 3s infinite ease-in-out;
+        color: white;
+        opacity: 0.9;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(10deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="main.html" style="text-decoration: none; margin-right: auto">
+        <button>이전</button>
+      </a>
+      <h1 style="margin: 5px">프라이데이 나이트 펑킨</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+    <div style="color: white; font-size: 20px; padding-left: 20px;">
+      <img style ="display: block; margin: 0 auto;"  src="https://i.namu.wiki/i/lW3H7hpIAHPrkOgC-tt570oRJloy8Hz0aVhWRZZ4i45ZPsZuQqIMrD7lbcTbJG_nAll25NUXIpJ2ekCGHewCl7TsLJIcfw3UgskenZ5iqWIzbUxapfgpuY1kbYlnqCDb0WPlGg85X0KfDjBt7MQSvA.webp">
+      <br>
+      프라이데이 나이트 펑킨은 리듬 게임으로 2020년 11월 2020에 Ninjamuffin99와 PhantomArcade라는 개발자들에 의해 제작된 게임이다. 이 게임은 주로 **밴드 오브 "Boyfriend"**라는 캐릭터와 그의 연인인 Girlfriend와 함께 진행됩니다. 주된 목적은 Boyfriend가 Girlfriend의 아버지인 Daddy Dearest와 같은 캐릭터들과 음악 배틀을 통해 경쟁하는 것이다. 이 게임은 리듬과 타이밍에 맞춰 버튼을 눌러야 하는 요소로, 사용자들이 리듬에 맞춰 키를 눌러서 적과 대결을 벌이는 방식입니다. 게임의 구조는 간단하면서도, 그에 따라 점차적으로 난이도가 올라가는 방식으로 설계되어 있다.
+    </div>
+
+    <script>
+      // 마이크 여러 개 생성
+      const micCount = 50;
+      for (let i = 0; i < micCount; i++) {
+        const mic = document.createElement("div");
+        mic.className = "mic";
+        mic.textContent = "🎤";
+        mic.style.left = Math.random() * window.innerWidth + "px";
+        mic.style.top = Math.random() * window.innerHeight + "px";
+        mic.style.fontSize = (Math.random() * 20 + 20) + "px";
+        mic.style.animationDelay = Math.random() * 3 + "s";
+        document.body.appendChild(mic);
+      }
+    </script>
+  </body>
+</html>

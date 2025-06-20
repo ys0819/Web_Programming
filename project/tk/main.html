@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>태경의 웹페이지</title>
+  <style>
+    /* 배경 전체 - 어두운 그라데이션 + 불꽃 애니메이션 */
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+      color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+      height: 100vh;
+    }
+
+
+    /* 불꽃 모양 애니메이션 */
+    @keyframes flicker {
+      0%, 100% { opacity: 0.8; transform: scale(1) translateY(0); }
+      50% { opacity: 1; transform: scale(1.1) translateY(-5px); }
+    }
+
+
+    /* 불꽃 여러 개를 겹쳐서 배경 느낌 */
+    .flame {
+      position: fixed;
+      bottom: 0;
+      width: 60px;
+      height: 100px;
+      background: radial-gradient(circle at center, #ff4500 40%, transparent 70%);
+      filter: blur(8px);
+      animation: flicker 1.5s infinite ease-in-out;
+      opacity: 0.6;
+      mix-blend-mode: screen;
+      border-radius: 50% 50% 20% 20% / 70% 70% 30% 30%;
+      box-shadow: 0 0 20px #ff3300, 0 0 40px #ff4500, 0 0 60px #ff6600;
+    }
+
+
+    /* 여러 불꽃 위치 조정 */
+    .flame:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .flame:nth-child(2) { left: 30%; animation-delay: 0.3s; }
+    .flame:nth-child(3) { left: 50%; animation-delay: 0.6s; }
+    .flame:nth-child(4) { left: 70%; animation-delay: 0.2s; }
+    .flame:nth-child(5) { left: 90%; animation-delay: 0.4s; }
+
+
+    /* 연기 느낌 - 반투명 회색 물결 애니메이션 */
+    @keyframes smokeMove {
+      0% { transform: translateX(0) translateY(0) scale(1); opacity: 0.5; }
+      50% { transform: translateX(10px) translateY(-10px) scale(1.1); opacity: 0.3; }
+      100% { transform: translateX(0) translateY(0) scale(1); opacity: 0.5; }
+    }
+
+
+    .smoke {
+      position: fixed;
+      bottom: 20px;
+      width: 100px;
+      height: 50px;
+      background: radial-gradient(circle at center, rgba(200, 200, 200, 0.5) 40%, transparent 80%);
+      filter: blur(15px);
+      animation: smokeMove 4s infinite ease-in-out;
+      opacity: 0.4;
+      border-radius: 50% / 100%;
+      mix-blend-mode: screen;
+    }
+
+
+    .smoke:nth-child(6) { left: 25%; animation-delay: 0s; }
+    .smoke:nth-child(7) { left: 60%; animation-delay: 2s; }
+
+
+    /* 제목 스타일 */
+    h1 {
+      text-align: center;
+      border-bottom: 3px solid #b22222;
+      padding-bottom: 10px;
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px #000;
+      margin-bottom: 50px;
+    }
+
+
+    /* 링크 텍스트 스타일 */
+    a {
+      text-decoration: none;
+      color: #f4f4f4;
+    }
+
+
+    p {
+      font-size: 40px;
+      border: 3px solid #b22222;
+      border-radius: 15px;
+      padding: 15px 20px;
+      width: fit-content;
+      max-width: 90vw;
+      margin: 20px auto;
+      background-color: rgba(20, 0, 0, 0.6);
+      box-shadow: 0 0 15px #b22222;
+      font-weight: 700;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+
+    p:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff0000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>내가 좋아하는 게임</h1>
+
+
+  <a href="./detail1.html"><p>1. 로블록스</p></a>
+  <a href="./detail2.html"><p>2. 라이벌</p></a>
+  <a href="./detail3.html"><p>3. 배드워즈</p></a>
+
+
+  <!-- 불꽃 요소들 -->
+  <div class="flame"></div>
+  <div class="flame"></div>
+  <div class="flame"></div>
+  <div class="flame"></div>
+  <div class="flame"></div>
+
+
+  <!-- 연기 요소들 -->
+  <div class="smoke"></div>
+  <div class="smoke"></div>
+</body>
+</html>
+
+

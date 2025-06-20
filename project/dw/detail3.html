@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>도원의 웹페이지</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(to bottom, #87ceeb, #b0e0ff);
+        font-family: sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+      /* 해 */
+      .sun {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle at center, #ffdd33, #ffaa00);
+        border-radius: 50%;
+        box-shadow: 0 0 30px 10px rgba(255, 204, 0, 0.5);
+        z-index: 1;
+      }
+      /* 구름 기본 스타일 */
+      .cloud {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.05));
+      }
+      .cloud::before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+      }
+
+
+      /* 구름1 */
+      .cloud1 {
+        width: 80px;
+        height: 80px;
+        top: 120px;
+        left: 180px;
+        box-shadow:
+          50px 15px 0 0 #fff,
+          90px 25px 0 0 #fff,
+          130px 15px 0 0 #fff;
+      }
+      .cloud1::before {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+        left: 20px;
+        box-shadow:
+          50px 15px 0 0 #fff,
+          90px 25px 0 0 #fff,
+          130px 15px 0 0 #fff;
+      }
+
+
+      /* 구름2 */
+      .cloud2 {
+        width: 60px;
+        height: 60px;
+        top: 60px;
+        left: 400px;
+        box-shadow:
+          40px 10px 0 0 #fff,
+          70px 20px 0 0 #fff,
+          100px 10px 0 0 #fff;
+      }
+      .cloud2::before {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+        left: 15px;
+        box-shadow:
+          40px 10px 0 0 #fff,
+          70px 20px 0 0 #fff,
+          100px 10px 0 0 #fff;
+      }
+
+
+      /* 구름3 */
+      .cloud3 {
+        width: 100px;
+        height: 100px;
+        top: 180px;
+        left: 600px;
+        box-shadow:
+          60px 20px 0 0 #fff,
+          100px 30px 0 0 #fff,
+          140px 20px 0 0 #fff;
+      }
+      .cloud3::before {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        left: 30px;
+        box-shadow:
+          60px 20px 0 0 #fff,
+          100px 30px 0 0 #fff,
+          140px 20px 0 0 #fff;
+      }
+
+
+      /* 구름4 */
+      .cloud4 {
+        width: 50px;
+        height: 50px;
+        top: 30px;
+        left: 800px;
+        box-shadow:
+          30px 8px 0 0 #fff,
+          55px 15px 0 0 #fff,
+          80px 8px 0 0 #fff;
+      }
+      .cloud4::before {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 12px;
+        box-shadow:
+          30px 8px 0 0 #fff,
+          55px 15px 0 0 #fff,
+          80px 8px 0 0 #fff;
+      }
+
+
+      /* 헤더 스타일 */
+      .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
+        position: relative;
+        z-index: 10;
+      }
+      .header h1 {
+        margin: 5px;
+      }
+      .header button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+
+
+    <div class="header">
+      <a href="main.html">
+        <button>이전</button>
+      </a>
+      <h1>포메리안</h1>
+      <div style="margin-left: auto"></div>
+    </div>
+    <div style="font-size: 30px;">
+      <br><br>
+      <img style="width: 400px" src="data:image/webp;base64,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">
+      <br>
+      포메리안은 작고 귀여운 강아지며 솜털같이 생긴게 특징이다
+    </div>
+  </body>
+</html>
